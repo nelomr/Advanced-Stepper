@@ -1,0 +1,17 @@
+@import "../../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+/* breakpoints */
+
+$max-mobile: max-width 480px;
+$min-tablet: min-width 480px;
+$min-desktop: min-width 769px;
+$min-desktop-xlarge: min-width 1280px;
+$min-desktop-xxlarge: min-width 1440px;
+
+/* colors */
+
+$line-color: rgb(224, 102, 102);
+$line-width: 6px;
+$label-height: 2em;
+$label-color-active: rgb(224, 102, 102);
+$label-color-inactive: #99a4ac;

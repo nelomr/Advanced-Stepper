@@ -1,54 +1,3 @@
-<template>
-<div class="checkout-wrapper">
-    <ol class="checkout">
-        <li class="step" v-for="(step, stepIndex) in steps"
-            :key="step.id"
-            :class="{
-              'prev': stepIndex < currentStep,
-              'active': stepIndex === currentStep }"
-            >
-            <span class="step-dot">{{ stepIndex + 1 }}</span>
-            <span class="step-label">{{ step.name }}</span>
-        </li>
-    </ol>
-</div>
-</template>
-
-<script>
-export default {
-  name: 'Stepper',
-
-  props: {
-    currentStep: {
-      type: Number,
-      default: 0
-    },
-    steps: {
-      type: Array,
-      required: true
-    }
-  },
-
-  methods: {
-    
-  },
-
-  data () {
-    return {
-
-    }
-  }
-}
-</script>
-
-<style lang="scss">
-
-$line-width: 6px;
-$line-color: rgb(224, 102, 102);
-$label-height: 2em;
-$label-color-active: rgb(224, 102, 102);
-$label-color-inactive: #99a4ac;
-
 .checkout-wrapper {
   box-sizing: border-box;
   border: 1px solid #DDD;
@@ -152,6 +101,4 @@ $label-color-inactive: #99a4ac;
 
 button + button {
   margin-left: 1rem;
-}  
-
-</style>
+}

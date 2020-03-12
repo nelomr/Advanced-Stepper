@@ -1,0 +1,46 @@
+.step-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.step-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 170px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    outline: none;
+    appearance: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    color: $line-color;
+    background-color: #FFF;
+    border: 2px solid $line-color;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    @include breakpoint($min-tablet) {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.is-next {
+        color: #FFF;
+        background-color: $line-color;
+    }
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
