@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <stepper/>
+    <stepper :currentStep="step" :steps="steps"/>
     <step-one/>
   </div>
 </template>
@@ -26,6 +26,11 @@ export default {
         { name: 'New feature', },
         { name: 'Tests', },
       ]
+    }
+  },
+  computed: {
+    step() {
+      return this.$store.state.step;
     }
   }
 }

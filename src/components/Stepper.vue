@@ -7,7 +7,7 @@
               'prev': stepIndex < currentStep,
               'active': stepIndex === currentStep }"
             >
-            <span class="step-dot">{{ stepIndex }}</span>
+            <span class="step-dot">{{ stepIndex + 1 }}</span>
             <span class="step-label">{{ step.name }}</span>
         </li>
     </ol>
@@ -21,7 +21,7 @@ export default {
   props: {
     currentStep: {
       type: Number,
-      default: '0'
+      default: 0
     },
     steps: {
       type: Array,
