@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <stepper :currentStep="step" :steps="steps"/>
+    <stepper
+    :currentStep="step"
+    :steps="steps"
+    :nameTop="true" />
     <router-view />
   </div>
 </template>

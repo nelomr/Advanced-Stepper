@@ -85,6 +85,11 @@
     white-space: nowrap;
     visibility: visible;
     cursor: pointer;
+
+    .has-top-name & {
+      top: -$label-height;
+      bottom: auto;
+    }
   }
 
   .step.active .step-label {

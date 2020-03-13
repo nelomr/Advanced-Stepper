@@ -1,5 +1,5 @@
 <template>
-<div class="checkout-wrapper" @keyup="controlKeyEvents">
+<div class="checkout-wrapper" @keyup="controlKeyEvents" :class="{'has-top-name': nameTop}">
     <ol class="checkout">
         <li class="step" v-for="(step, stepIndex) in steps"
             :key="step.id"
@@ -34,6 +34,10 @@ export default {
     steps: {
       type: Array,
       required: true
+    },
+    nameTop: {
+      type: Boolean,
+      default: false
     }
   },
   
