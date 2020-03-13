@@ -9,6 +9,7 @@
       <ul>
         <li><a href="https://marvelapp.com/5668dj6/screen/59706050">Listado</a></li>
         <li><a href="https://marvelapp.com/5668dj6/screen/59706049">Detalle</a></li>
+        <li><a href="https://mrjeffapp.invisionapp.com/share/GBWEEI62PCW#/screens/409194447">Listado y detalle - update</a></li>
       </ul>
       <br>
       <p><strong>Requisitos:</strong></p>

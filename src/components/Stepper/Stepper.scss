@@ -1,32 +1,37 @@
 .checkout-wrapper {
+  width: 100%;
+  padding: 1rem;
   box-sizing: border-box;
   border: 1px solid #DDD;
-  padding: 1rem;
-  width: 100%;
 }
+
 .checkout {
   display: flex;
-  margin: 2rem 0;
   padding-left: 0;
-  padding-bottom: 2em;
+  margin: 1rem 0 0;
   text-align: center;
   list-style: none;
 
+  @include breakpoint($min-desktop) {
+    padding-bottom: 2em;
+    margin: 2rem 0;
+  }
+
   .step {
     cursor: default;
-    flex: 1 1 100%;
-    height: 20px;
     position: relative;
     z-index: 0;
+    flex: 1 1 100%;
+    height: 20px;
 
     &:before, 
     &:after {
-      position: absolute;
       content: '';
+      position: absolute;
       top: 50%;
-      transform: translateY(-2px);
-      border-bottom: $line-width solid #eee;
       z-index: -1;
+      border-bottom: $line-width solid #eee;
+      transform: translateY(-2px);
     }
 
     &:before {
@@ -45,22 +50,22 @@
 
   .step-dot {
     display: inline-block;
-    background-color: #eee;
-    color: #aaa;
     width: 4 * $line-width;
     height: 4 * $line-width;
+    cursor: pointer;
+    color: #aaa;
+    background-color: #eee;
     border: 2px solid #fff;
     border-radius: 8px;
-    cursor: pointer;
   }
 
   .step.prev,
   .step.active {
 
     .step-dot {
-      background-color: $line-color;
-      color: #fff;
       cursor: pointer;
+      color: #fff;
+      background-color: $line-color;
     }
 
     &:before {
@@ -79,12 +84,16 @@
     position: absolute;
     bottom: -$label-height;
     left: 50%;
-    transform: translateX(-50%);
-    color: $label-color-inactive;
     font-weight: 600;
+    color: $label-color-inactive;
     white-space: nowrap;
-    visibility: visible;
+    transform: translateX(-50%);
+    visibility: hidden;
     cursor: pointer;
+  
+    @include breakpoint($min-desktop) {
+      visibility: visible;
+    }
 
     .has-top-name & {
       top: -$label-height;
@@ -93,9 +102,47 @@
   }
 
   .step.active .step-label {
-    color: $label-color-active;
     font-weight: bold;
-    visibility: visible;
+    color: $label-color-active;
+
+
+    @include breakpoint($min-desktop) {
+      visibility: visible;
+    }
+  }
+
+  .step:not(.active) .step-label {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.step-mobile {
+  position: relative;
+  padding: 15px 0;
+  margin: 1rem 0 2rem;
+
+  @include breakpoint($min-desktop) {
+    display: none;
+  }
+
+  .step {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .1s ease;
+
+    &.active {
+      opacity: 1;
+      transition: opacity .3s ease .1s;
+    }
+  }
+
+  .step-label {
+    font-weight: bold;
+    color: $label-color-active;
   }
 
   .step:not(.active) .step-label {

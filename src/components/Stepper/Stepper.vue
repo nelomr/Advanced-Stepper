@@ -1,7 +1,8 @@
 <template>
 <div class="checkout-wrapper" @keyup="controlKeyEvents" :class="{'has-top-name': nameTop}">
     <ol class="checkout">
-        <li class="step" v-for="(step, stepIndex) in steps"
+        <li class="step" 
+            v-for="(step, stepIndex) in steps"
             :key="step.id"
             :class="{
               'prev': stepIndex < currentStep,
@@ -12,6 +13,18 @@
             <span class="step-label">{{ step.name }}</span>
         </li>
     </ol>
+    <div class="step-mobile">
+      <div
+        class="step"
+        v-for="(step, stepIndex) in steps"
+        :key="step.id"
+        :class="{
+        'prev': stepIndex < currentStep,
+        'active': stepIndex === currentStep }"
+      >
+        <span class="step-label">{{ stepIndex + 1 }} - {{ step.name }}</span>
+      </div>
+    </div>
     <step-buttons />
 </div>
 </template>
@@ -64,6 +77,7 @@ export default {
       }
     },
     next() {
+      console.log(this.currentStep, this.numberSteps);
       if (this.currentStep < (this.numberSteps - 1)) {
         this.$store.dispatch('incrementStep');
       }
