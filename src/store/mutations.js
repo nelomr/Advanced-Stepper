@@ -10,5 +10,8 @@ export default {
     },
     putStep(state, step) {
         state.step = step;
+        if (state.step > state.currentStep) {
+            state.currentStep +=1;
+        }
     }
 };

@@ -29,12 +29,20 @@ export default {
         next() {
             if (this.currentStep < 4) {
                 this.$store.dispatch('incrementStep');
+                //this.goNext(this.currentStep);
             }
         },
         prev() {
             if (this.currentStep > 0) {
                 this.$store.dispatch('decreaseStep');
+                //this.goBack();
             }
+        },
+        goBack() {
+            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+        },
+        goNext(step) {
+            this.$router.push(`/step-${step + 1}`)
         }
     }
 }

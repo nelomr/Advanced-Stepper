@@ -60,7 +60,7 @@ export default {
       }
     },
     next() {
-      if (this.currentStep < 4) {
+      if (this.currentStep < (this.numberSteps - 1)) {
         this.$store.dispatch('incrementStep');
       }
     },
@@ -70,10 +70,9 @@ export default {
       }
     }
   },
-
-  data () {
-    return {
-
+  computed: {
+    numberSteps() {
+      return this.$store.state.steps.length;
     }
   }
 }

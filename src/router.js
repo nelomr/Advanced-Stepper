@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from './App'
+import StepOne from '@/components/StepOne'
+import StepTwo from '@/components/StepTwo'
+import StepThree from '@/components/StepThree'
+import StepFour from '@/components/StepFour'
+import StepFive from '@/components/StepFive'
 
 Vue.use(Router)
 
@@ -11,7 +15,31 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: App
+      component: StepOne,
+    },
+    {
+      path: '/step-2',
+      name: 'step-2',
+      component: StepTwo
+    },
+    {
+      path: '/step-3',
+      name: 'step-3',
+      component: StepThree
+    },
+    {
+      path: '/step-4',
+      name: 'step-4',
+      component: StepFour
+    },
+    {
+      path: '/step-5',
+      name: 'step-5',
+      component: StepFive
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })
