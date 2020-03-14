@@ -8,6 +8,21 @@
     }
 }
 
+a.step-button {
+    justify-content: center;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &.has-margin-top {
+        margin-top: 40px;
+    }
+
+    &:hover {
+        color: $light-color;
+        background-color: $line-color;
+    }
+}
+
 .step-button {
     display: flex;
     justify-content: space-between;
@@ -23,7 +38,7 @@
     line-height: 25px;
     color: $line-color;
     cursor: pointer;
-    background-color: #FFF;
+    background-color: $light-color;
     border: 2px solid $line-color;
     box-sizing: border-box;
     border-radius: 24px;
@@ -40,7 +55,7 @@
     }
 
     &.is-next {
-        color: #FFF;
+        color: $light-color;
         background-color: $line-color;
     }
 

@@ -1,5 +1,6 @@
 <template>
   <div class="step">
+    <router-link class="step-button has-margin-top" :to="{name:'orders'}">VER PEDIDOS</router-link>
     <div class="exercise">
       <h1>Task 4 - A new feature 🎉</h1>
       <p>Tenemos que elaborar dos nuevas vistas para los usuarios: un listado de todos
@@ -41,7 +42,12 @@
 </template>
 
 <script>
+import ordersList from '@/components/OrdersList/OrdersList.vue';
+
 export default {
-  name: 'step-four'
+  name: 'step-four',
+  components: {
+      ordersList
+  },
 }
 </script>

@@ -10,7 +10,7 @@ function getOrders () {
         'Authorization': `Bearer ${token}`
       }
   })
-    .then(res =>res.data.orders._embedded.orders)
+    .then(res => {console.log(res.data); return res.data.orders._embedded.orders})
     .catch(error => {
       throw error
     })

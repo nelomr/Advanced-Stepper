@@ -1,0 +1,73 @@
+.order-item {
+    padding: 0 10px 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $grey-medium;
+
+    @include breakpoint($min-desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.order-item--content,
+.order-item--button {
+    @include breakpoint($min-desktop) {
+        flex: 0 1 50%;
+        width: 50%;
+    }
+}
+
+.order-item--content {
+    display: flex;
+    margin-bottom: 10px;
+
+    @include breakpoint($min-desktop) {
+        margin-bottom: 0;
+    }
+}
+
+.order-item--icon {
+    display: flex;
+
+    img {
+        width: auto;
+        height: 44px;
+        margin-top: 0;
+        border: none
+    }
+}
+
+.order-item--text {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.order-item--title {
+    font-weight: bold;
+}
+
+.order-item--date {
+    color: $text-color;
+}
+
+.order-item--button {
+    text-align: right;
+
+    .button {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
+        color: $light-color;
+        cursor: pointer;
+        cursor: hand;
+        text-decoration: none;
+        background-color: $secondary-color;
+        appearance: none;
+        border: none;
+        border-radius: 4px;
+
+        @include breakpoint($min-tablet) {
+            width: auto;
+        }
+    }
+}

@@ -1,17 +1,23 @@
+html,
 body {
+    height: 100%;
     margin: 0;
   }
+
   #app {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
-    margin-bottom: 4rem;
+    padding: 1rem 1rem 4rem;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2C3E50;
+
+    @include breakpoint($min-desktop-xlarge) {
+      height: 100%;
+    }
   }
   
   .step {
@@ -42,13 +48,13 @@ body {
     margin-top: 1rem;
   }
   .code {
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem auto;
     text-align: left;
     font-family: monospace;
-    background-color: rgb(225, 225, 225);
-    padding: 1rem;
+    background-color: $light-color;
     border-radius: 4px;
-    margin: 1rem auto;
-    width: fit-content;
   }
   .doc-box {
     padding: 1rem;

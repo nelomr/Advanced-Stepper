@@ -1,0 +1,31 @@
+.orders-page {
+    flex: 1;
+    width: 100%;
+    margin-bottom: -4rem;
+    background-color: $background-color;
+}
+
+.orders {
+    min-height: 445px;
+    max-width: 840px;
+    margin: 50px auto;
+    background-color: $light-color;
+}
+
+.orders--title {
+    padding: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid $grey-medium;
+}
+
+.orders-list {
+    padding: 0 0 40px;
+
+    @include breakpoint($min-tablet) {
+        padding: 0 50px 40px;
+    }
+}

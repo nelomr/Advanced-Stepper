@@ -13,7 +13,7 @@
 
 <script>
 import IconButtonRight from '@/components/icons/IconButtonRight.vue';
-import IconButtonLeft from '@/components/icons/IconButtonLeft.vue'
+import IconButtonLeft from '@/components/icons/IconButtonLeft.vue';
 
 export default {
     components: {
@@ -49,5 +49,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "./stepButtons.scss";
+    @import "./StepButtons.scss";
 </style>
