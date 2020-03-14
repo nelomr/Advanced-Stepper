@@ -13,5 +13,8 @@ export default {
         if (state.step > state.currentStep) {
             state.currentStep +=1;
         }
+    },
+    setOrders(state, orders) {
+        state.orders = orders;
     }
 };

@@ -2,16 +2,16 @@ body {
     margin: 0;
   }
   #app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 4rem;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 4rem;
-    padding: 1rem;
+    color: #2C3E50;
   }
   
   .step {
@@ -51,15 +51,15 @@ body {
     width: fit-content;
   }
   .doc-box {
-    border: 1px solid #DDD;
     padding: 1rem;
-    background-color: #EFEFEF;
     margin: 2rem 0;
+    background-color: $grey-light-color;
+    border: 1px solid $grey-color;
   }
   .exercise {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid $grey-color;
   
     ul, ol {
       margin: .5em 0;
@@ -73,9 +73,13 @@ body {
   }
   
   .info {
-    margin-top: 1rem;
-    border: 1px solid #DDD;
     padding: 0.5rem 1rem;
-    background-color: #EFEFEF;
+    margin-top: 1rem;
+    background-color: $grey-light-color;
+    border: 1px solid $grey-color;
+  }
+
+  .apires {
+    margin: 10px 0;
   }
   

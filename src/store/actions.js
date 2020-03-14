@@ -1,4 +1,8 @@
-import router from '../router'
+import router from '../router';
+import client from '../services/client';
+import getOrders from '@/api/getOrders';
+
+const UrlOrders = '/apps/orders/search/findByCustomerId';
 
 export default {
     incrementStep({commit, state}) {
@@ -19,5 +23,12 @@ export default {
         if (step > state.currentStep && step < state.steps.length) {
             dispatch('incrementStep');
         }
+    },
+    fetchOrders({commit}) {
+        getOrders().then(result => {
+            let orders = result;
+            commit('setOrders', orders);
+        })
+        .catch(error => { console.error(error); throw error; });
     }
 };

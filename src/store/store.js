@@ -15,7 +15,8 @@ export default new Vuex.Store({
       { name: 'API request', },
       { name: 'New feature', },
       { name: 'Tests', },
-    ]
+    ],
+    orders: []
   },
   actions,
   mutations

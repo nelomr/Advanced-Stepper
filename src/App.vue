@@ -18,6 +18,10 @@ export default {
     Stepper
   },
 
+  created() {
+    this.$store.dispatch('fetchOrders');
+  },
+
   computed: {
     step() {
       return this.$store.state.step;
