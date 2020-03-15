@@ -1,0 +1,91 @@
+.order-card {
+    max-width: 385px;
+    margin: 0 auto;
+}
+
+.order-card--text {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.order-card--title,
+.order-card--content-title {
+    font-weight: bold;
+}
+
+.order-card--date {
+    color: $text-color;
+}
+
+.order-card--content {
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border: 1px solid $grey-medium;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.order-card--box {
+    padding: 10px 25px;
+    margin: 0 -25px;
+    border-top: 1px solid $grey-medium;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.order-card--content-title {
+    margin-bottom: 10px;
+}
+
+.order-card--product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-card--product-title,
+.order-card--product-price {
+    flex: 0 1 calc(50% - 10px);
+}
+
+.order-card--product-price {
+    text-align: right;
+}
+
+.order-card--button {
+    width: 100%;
+    text-align: right;
+
+    .button {
+        display: inline-block;
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
+        color: $light-color;
+        cursor: pointer;
+        cursor: hand;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-color: $secondary-color;
+        appearance: none;
+        border: none;
+        border-radius: 4px;
+    }
+
+    &.is-transparent {
+        margin-top: 20px;
+        text-align: center;
+
+        .button {
+            width: auto;
+            color: #000;
+            background-color: transparent;
+            border: 1px solid #000;
+        }
+
+        span {
+            margin-right: 10px;
+        }
+    }
+}

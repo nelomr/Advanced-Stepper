@@ -16,7 +16,9 @@ export default new Vuex.Store({
       { name: 'New feature', },
       { name: 'Tests', },
     ],
-    orders: []
+    orders: [],
+    products: [],
+    productsDetailOrder: []
   },
   actions,
   mutations

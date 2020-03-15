@@ -4,7 +4,7 @@
     :currentStep="step"
     :steps="steps"
     :nameTop="true" />
-    <router-view />
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 

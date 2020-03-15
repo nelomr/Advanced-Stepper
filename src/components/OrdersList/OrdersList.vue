@@ -2,11 +2,7 @@
     <div class="orders">
         <div class="orders--title">Información de tus pedidos</div>
         <div class="orders-list">
-            <orderItem
-                v-for="(order, index) in orderList"
-                :key="'order' + index"
-                :order="order"
-            />
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -15,15 +11,7 @@
 import orderItem from '@/components/OrderItem/OrderItem.vue';
 
 export default {
-  name: 'order-list',
-  components: {
-      orderItem
-  },
-  computed: {
-      orderList() {
-          return this.$store.state.orders
-      }
-  }
+  name: 'order-list'
 }
 </script>
 

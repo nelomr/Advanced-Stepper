@@ -42,7 +42,7 @@ export default new Router({
     {
       path: '/orders',
       name: 'orders',
-      component: OrdersPage
+      component: OrdersPage,
     },
     {
       path: '/orders/:id',

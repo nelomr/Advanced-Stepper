@@ -1,4 +1,4 @@
-<template>
+<template v-if="order">
     <div class="order-item">
         <div class="order-item--content">
             <div class="order-item--icon">
@@ -7,10 +7,10 @@
             </div>
             <div class="order-item--text">
                 <div class="order-item--title">Pedido nº {{ order.code }}</div>
-                <div class="order-item--date">Fecha pedido {{ order.orderDate }}</div>
+                <div class="order-item--date">Fecha pedido: {{ order.orderDate }}</div>
             </div>
         </div>
-        <div class="order-item--button">
+        <div class="order--button">
             <router-link class="button" :to="{name:'orderId', params: {id: order.code}}">VER PEDIDO</router-link>
         </div>
     </div>

@@ -16,5 +16,11 @@ export default {
     },
     setOrders(state, orders) {
         state.orders = orders;
+    },
+    setProducts(state, products) {
+        state.products = products;
+    },
+    setFullOrder(state, result) {
+        state.productsDetailOrder = result;
     }
 };

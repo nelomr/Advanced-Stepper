@@ -50,10 +50,11 @@
     color: $text-color;
 }
 
-.order-item--button {
+.order--button {
     text-align: right;
 
     .button {
+        display: inline-block;
         width: 100%;
         padding: 12px 30px;
         font-size: 14px;

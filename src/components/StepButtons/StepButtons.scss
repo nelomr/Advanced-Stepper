@@ -41,7 +41,7 @@ a.step-button {
     background-color: $light-color;
     border: 2px solid $line-color;
     box-sizing: border-box;
-    border-radius: 24px;
+    border-radius: 4px;
 
     @include breakpoint($min-tablet) {
         width: auto;
