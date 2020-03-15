@@ -77,7 +77,6 @@ export default {
       }
     },
     next() {
-      console.log(this.currentStep, this.numberSteps);
       if (this.currentStep < (this.numberSteps - 1)) {
         this.$store.dispatch('incrementStep');
       }
