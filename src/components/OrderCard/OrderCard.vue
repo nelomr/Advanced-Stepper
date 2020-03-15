@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="order-card--button">
-            <button class="button">Cambiar horara recogida y entrega</button>
+            <button class="button">Cambiar hora recogida y entrega</button>
         </div>
         <div class="order-card--button is-transparent">
             <router-link class="button" :to="{name:'orders'}"> <span>&#8592;</span>VOLVER</router-link>

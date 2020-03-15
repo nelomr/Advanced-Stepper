@@ -1,8 +1,7 @@
 import router from '../router';
 import getOrders from '@/api/getOrders';
-import getProducts from '@/api/getProducts';
-
-const UrlOrders = '/apps/orders/search/findByCustomerId';
+import orderModel from '@/models/orderModel';
+import productsModel from '@/models/productsModel';
 
 export default {
     incrementStep({commit, state}) {
@@ -26,8 +25,8 @@ export default {
     },
     fetchOrders({commit}) {
         getOrders().then(result => {
-            let orders = result.orders._embedded.orders;;
-            let products = result.products._embedded.products;
+            let orders = orderModel(result.orders._embedded.orders);
+            let products = productsModel(result.products._embedded.products);
 
             commit('setOrders', orders);
             commit('setProducts', products);

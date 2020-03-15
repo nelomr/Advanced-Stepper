@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import orderItem from '@/components/OrderItem/OrderItem.vue';
-
 export default {
   name: 'order-list'
 }
