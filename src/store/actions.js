@@ -1,6 +1,6 @@
 import router from '../router';
 import getOrders from '@/api/getOrders';
-import orderModel from '@/models/orderModel';
+import ordersModel from '@/models/ordersModel';
 import productsModel from '@/models/productsModel';
 
 export default {
@@ -16,7 +16,7 @@ export default {
     toStep({commit, state, dispatch}, step) {
         if (step <= state.currentStep) {
             commit('putStep', step);
-            step >= 1 ? router.push(`/step-${step + 1}`) : router.push('/');
+            step >= 1 ? router.push(`/step-${step + 1}`).catch(err => {}) : router.push('/').catch(err => {});
         }
 
         if (step > state.currentStep && step < state.steps.length) {
@@ -25,7 +25,7 @@ export default {
     },
     fetchOrders({commit}) {
         getOrders().then(result => {
-            let orders = orderModel(result.orders._embedded.orders);
+            let orders = ordersModel(result.orders._embedded.orders);
             let products = productsModel(result.products._embedded.products);
 
             commit('setOrders', orders);
