@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrdersList renders the component 1`] = `
+<div class="orders">
+  <div class="orders--title">Información de tus pedidos</div>
+  <div class="orders-list"></div>
+</div>
+`;
