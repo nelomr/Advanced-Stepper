@@ -2,7 +2,7 @@
   <div class="step-buttons">
     <button 
       @click="prev()"
-      :class="{'is-hidden': currentStep < 1}" 
+      :class="{'is-hidden': currentStep < 1}"
       class="step-button is-prev"
     >
       <i><IconButtonLeft></IconButtonLeft></i>

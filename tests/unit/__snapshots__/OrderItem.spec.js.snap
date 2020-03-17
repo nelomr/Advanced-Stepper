@@ -9,7 +9,7 @@ exports[`OrderItem renders the component 1`] = `
       <div class="order--date">Fecha pedido: 2018-11-09</div>
     </div>
   </div>
-  <div class="order--button">
+  <div id="CO107341" class="order--button">
     <router-link-stub to="[object Object]" class="button">
       VER PEDIDO
     </router-link-stub>

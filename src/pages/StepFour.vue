@@ -42,12 +42,8 @@
 </template>
 
 <script>
-import ordersList from '@/components/OrdersList/OrdersList.vue';
 
 export default {
-  name: 'step-four',
-  components: {
-      ordersList
-  },
+  name: 'step-four'
 }
 </script>

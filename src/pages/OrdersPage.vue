@@ -2,7 +2,7 @@
   <div class="orders-page">
     <ordersList>
       <OrderItem
-          v-for="(order, index) in orderList"
+          v-for="(order, index) in ordersList"
           :key="'order' + index"
           :order="order"
       />
@@ -21,7 +21,7 @@ export default {
       OrderItem
   },
   computed: {
-      orderList() {
+      ordersList() {
           return this.$store.state.orders
       }
   }

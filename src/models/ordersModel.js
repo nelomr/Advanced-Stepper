@@ -1,18 +1,18 @@
 export default function(data) {
     let ordersModel = [];
 
-    data.forEach((order) => {
+    data.forEach((orderData) => {
         let orderObject = {};
-        let listData = order.productsOrder;
-        let visitsData = order.visits;
+        let listData = orderData.productsOrder;
+        let visitsData = orderData.visits;
 
-        orderObject.code = order.code;
-        orderObject.orderDate = order.orderDate;
-        orderObject.id = order.id;
-        orderObject.logisticCode = order.logistics.code;
-        orderObject.cuponId = order.cuponId || '';
-        orderObject.totalPrice = order.totalPrice;
-        orderObject.totalDeliveryPrice = order.totalDeliveryPrice;
+        orderObject.code = orderData.code;
+        orderObject.orderDate = orderData.orderDate;
+        orderObject.id = orderData.id;
+        orderObject.logisticCode = orderData.orderStatus.code;
+        orderObject.cuponId = orderData.cuponId || '';
+        orderObject.totalPrice = orderData.totalPrice;
+        orderObject.totalDeliveryPrice = orderData.totalDeliveryPrice;
         orderObject.productsOrder = [];
         orderObject.pickupDates = [];
 

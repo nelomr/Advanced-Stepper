@@ -20,7 +20,6 @@ export default new Router({
       name: 'home',
       component: StepOne,
       beforeEnter(to, from, next) {
-        // check vuex store //
         store.dispatch('controlStepRouter', 0);
           next()
       }
@@ -30,13 +29,12 @@ export default new Router({
       name: 'step-2',
       component: StepTwo,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep >= 1) {
           store.dispatch('controlStepRouter', 1);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
@@ -46,13 +44,12 @@ export default new Router({
       name: 'step-3',
       component: StepThree,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep >= 2) {
           store.dispatch('controlStepRouter', 2);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
@@ -62,13 +59,12 @@ export default new Router({
       name: 'step-4',
       component: StepFour,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep >= 3) {
           store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
@@ -78,13 +74,12 @@ export default new Router({
       name: 'step-5',
       component: StepFive,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep == 4) {
           store.dispatch('controlStepRouter', 4);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
@@ -94,13 +89,12 @@ export default new Router({
       name: 'orders',
       component: OrdersPage,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep >= 3) {
           store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
@@ -111,13 +105,12 @@ export default new Router({
       component: OrderPage,
       props: true,
       beforeEnter(to, from, next) {
-        // check vuex store //
         if (store.state.currentStep >= 3) {
           store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({
-            name: "home" // back to safety route //
+            name: "home"
           });
         }
       }
