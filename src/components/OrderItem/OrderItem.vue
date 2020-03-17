@@ -2,8 +2,8 @@
   <div class="order-item">
     <div class="order-item--content">
       <div class="order-item--icon">
-        <img v-if="order.logisticCode === 'DELIVERED'" src="@/assets/delivery.png" alt="marcador">
-        <img v-else src="@/assets/marcador.png" alt="marcador">
+        <img v-if="order.logisticCode === 'DELIVERED-PICKUP'" src="@/assets/images/delivery.png" alt="marcador">
+        <img v-else src="@/assets/images/marcador.png" alt="marcador">
       </div>
       <div class="order-item--text">
         <div class="order-item--title">Pedido nº {{ order.code }}</div>
