@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepButtons renders the component 1`] = `
+<div class="step-buttons"><button class="step-button is-prev is-hidden"><i>
+      <iconbuttonleft-stub></iconbuttonleft-stub>
+    </i>
+    Anterior
+  </button> <button class="step-button is-next">
+    Continuar
+    <i>
+      <iconbuttonright-stub></iconbuttonright-stub>
+    </i></button></div>
+`;
