@@ -1,17 +1,17 @@
 <template v-if="order">
-  <div class="order-item">
-    <div class="order-item--content">
-      <div class="order-item--icon">
+  <div class="order">
+    <div class="order--content">
+      <div class="order--icon">
         <img v-if="order.logisticCode === 'DELIVERED-PICKUP'" src="@/assets/images/delivery.png" alt="marcador">
         <img v-else src="@/assets/images/marcador.png" alt="marcador">
       </div>
-      <div class="order-item--text">
-        <div class="order-item--title">Pedido nº {{ order.code }}</div>
-        <div class="order-item--date">Fecha pedido: {{ order.orderDate }}</div>
+      <div class="order--text">
+        <div class="order--title">Pedido nº {{ order.code }}</div>
+        <div class="order--date">Fecha pedido: {{ order.orderDate }}</div>
       </div>
     </div>
-      <div class="order--button">
-        <router-link class="button" 
+      <div :id="order.code" class="order--button">
+        <router-link class="button"
           :to="{name:'orderId', params: {id: order.code}}"
         >
           VER PEDIDO
@@ -23,7 +23,7 @@
 <script>
 
 export default {
-  name: 'order-item',
+  name: 'order',
   props: {
     order: {
       type: Object,
@@ -33,6 +33,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   @import "./OrderItem.scss";
 </style>

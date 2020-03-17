@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import store from './store/store'
-import StepOne from '@/components/StepOne';
-import StepTwo from '@/components/StepTwo';
-import StepThree from '@/components/StepThree';
-import StepFour from '@/components/StepFour';
-import StepFive from '@/components/StepFive';
+import StepOne from '@/pages/StepOne';
+import StepTwo from '@/pages/StepTwo';
+import StepThree from '@/pages/StepThree';
+import StepFour from '@/pages/StepFour';
+import StepFive from '@/pages/StepFive';
 import OrdersPage from '@/pages/OrdersPage';
 import OrderPage from '@/pages/OrderPage'
 
@@ -21,7 +21,7 @@ export default new Router({
       component: StepOne,
       beforeEnter(to, from, next) {
         // check vuex store //
-          store.state.step = 0
+        store.dispatch('controlStepRouter', 0);
           next()
       }
     },
@@ -32,7 +32,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep >= 1) {
-          store.state.step = 1
+          store.dispatch('controlStepRouter', 1);
           next()
         } else {
           next({
@@ -48,7 +48,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep >= 2) {
-          store.state.step = 2
+          store.dispatch('controlStepRouter', 2);
           next()
         } else {
           next({
@@ -64,7 +64,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep >= 3) {
-          store.state.step = 3
+          store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({
@@ -80,7 +80,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep == 4) {
-          store.state.step = 4
+          store.dispatch('controlStepRouter', 4);
           next()
         } else {
           next({
@@ -96,7 +96,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep >= 3) {
-          store.state.step = 3
+          store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({
@@ -113,7 +113,7 @@ export default new Router({
       beforeEnter(to, from, next) {
         // check vuex store //
         if (store.state.currentStep >= 3) {
-          store.state.step = 3
+          store.dispatch('controlStepRouter', 3);
           next()
         } else {
           next({

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderCard renders the component 1`] = `
+<div class="card">
+  <div class="card--text">
+    <div class="card--title">Datos del pedido nº CO107341</div>
+    <div class="card--date">Fecha pedido: 2018-11-09</div>
+  </div>
+  <div class="card--content">
+    <div class="card--content-title">Productos</div>
+    <div class="card--box">
+      <!---->
+      <div class="card--product">
+        <div class="card--product-title">Recogida/entrega</div>
+        <div class="card--product-price">0 €</div>
+      </div>
+    </div>
+    <div class="card--box">
+      <div class="card--content-title">Productos Añadidos</div>
+      <div class="card--product">
+        <div class="card--product-title"><span>2 x </span> Pantalón
+        </div>
+        <div class="card--product-price">3500 €</div>
+      </div>
+      <div class="card--product">
+        <div class="card--product-title">
+          <!----> Saco
+        </div>
+        <div class="card--product-price">3500 €</div>
+      </div>
+      <div class="card--product">
+        <div class="card--product-title">
+          <!----> chaqueta
+        </div>
+        <div class="card--product-price">4000 €</div>
+      </div>
+    </div>
+    <div class="card--box">
+      <div class="card--product">
+        <div class="card--product-title">Total</div>
+        <div class="card--product-price">14500 €</div>
+      </div>
+    </div>
+  </div>
+  <div class="card--button">
+    <collapse-component-stub><template></template> <template></template></collapse-component-stub>
+  </div>
+  <div class="card--button is-transparent">
+    <router-link-stub to="[object Object]" class="button"><span>←</span>VOLVER</router-link-stub>
+  </div>
+</div>
+`;

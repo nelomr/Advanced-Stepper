@@ -47,7 +47,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-    @import "./StepButtons.scss";
-</style>

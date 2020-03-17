@@ -1,23 +1,23 @@
-.order-card {
+.card {
     max-width: 385px;
     margin: 0 auto;
 }
 
-.order-card--text {
+.card--text {
     margin-bottom: 20px;
     text-align: left;
 }
 
-.order-card--title,
-.order-card--content-title {
+.card--title,
+.card--content-title {
     font-weight: bold;
 }
 
-.order-card--date {
+.card--date {
     color: $text-color;
 }
 
-.order-card--content {
+.card--content {
     padding: 20px 25px;
     margin-bottom: 20px;
     border: 1px solid $grey-medium;
@@ -25,7 +25,7 @@
     text-align: left;
 }
 
-.order-card--box {
+.card--box {
     padding: 10px 25px;
     margin: 0 -25px;
     border-top: 1px solid $grey-medium;
@@ -35,25 +35,25 @@
     }
 }
 
-.order-card--content-title {
+.card--content-title {
     margin-bottom: 10px;
 }
 
-.order-card--product {
+.card--product {
     display: flex;
     justify-content: space-between;
 }
 
-.order-card--product-title,
-.order-card--product-price {
+.card--product-title,
+.card--product-price {
     flex: 0 1 calc(50% - 10px);
 }
 
-.order-card--product-price {
+.card--product-price {
     text-align: right;
 }
 
-.order-card--button {
+.card--button {
     width: 100%;
     text-align: right;
 
@@ -71,6 +71,13 @@
         appearance: none;
         border: none;
         border-radius: 4px;
+
+        &.is-small {
+            width: auto;
+            padding: 6px 10px;
+            font-size: 12px;
+            background-color: $line-color;
+        }
     }
 
     &.is-transparent {

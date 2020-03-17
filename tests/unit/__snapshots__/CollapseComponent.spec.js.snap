@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`collapse renders the component 1`] = `
+<div class="collapse-component">
+  <div class="collapse-trigger"></div>
+  <div class="collapse-component--wrapper">
+    <div class="collapse-component--collapsible">
+      <div class="collapse-component--content"></div>
+    </div>
+  </div>
+</div>
+`;

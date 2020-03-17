@@ -3,9 +3,7 @@ import OrdersList from '@/components/OrdersList/OrdersList';
 
 describe('OrdersList', () => {
     const build = () => {
-        const wrapper = shallowMount(OrdersList, {
-            
-        });
+        const wrapper = shallowMount(OrdersList, {});
 
         return {
             wrapper

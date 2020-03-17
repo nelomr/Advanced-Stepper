@@ -30,12 +30,6 @@
 
 <script>
 export default {
-  name: 'step-two',
-
-  props: {
-    currentStep: {
-      type: Number
-    }
-  }
+  name: 'step-two'
 }
 </script>

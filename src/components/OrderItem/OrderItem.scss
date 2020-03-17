@@ -1,4 +1,4 @@
-.order-item {
+.order {
     padding: 0 10px 15px;
     margin-bottom: 20px;
     border-bottom: 1px solid $grey-medium;
@@ -9,15 +9,15 @@
     }
 }
 
-.order-item--content,
-.order-item--button {
+.order--content,
+.order--button {
     @include breakpoint($min-desktop) {
         flex: 0 1 50%;
         width: 50%;
     }
 }
 
-.order-item--content {
+.order--content {
     display: flex;
     margin-bottom: 10px;
 
@@ -26,7 +26,7 @@
     }
 }
 
-.order-item--icon {
+.order--icon {
     display: flex;
 
     img {
@@ -37,24 +37,27 @@
     }
 }
 
-.order-item--text {
+.order--text {
     margin-left: 20px;
     text-align: left;
 }
 
-.order-item--title {
+.order--title {
     font-weight: bold;
 }
 
-.order-item--date {
+.order--date {
     color: $text-color;
 }
 
 .order--button {
-    text-align: right;
+    display: flex;
+
+    @include breakpoint($min-tablet) {
+       justify-content: flex-end;
+    }
 
     .button {
-        display: inline-block;
         width: 100%;
         padding: 12px 30px;
         font-size: 14px;

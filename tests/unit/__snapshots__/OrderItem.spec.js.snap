@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderItem renders the component 1`] = `
+<div class="order">
+  <div class="order--content">
+    <div class="order--icon"><img src="@/assets/images/marcador.png" alt="marcador"></div>
+    <div class="order--text">
+      <div class="order--title">Pedido nº CO107341</div>
+      <div class="order--date">Fecha pedido: 2018-11-09</div>
+    </div>
+  </div>
+  <div class="order--button">
+    <router-link-stub to="[object Object]" class="button">
+      VER PEDIDO
+    </router-link-stub>
+  </div>
+</div>
+`;

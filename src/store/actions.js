@@ -12,7 +12,9 @@ export default {
         commit('decreaseStateStep');
         state.step >= 1 ? router.push(`/step-${state.step + 1}`) : router.push('/');
     },
-
+    controlStepRouter({commit}, step) {
+        commit('putStep', step);
+    },
     toStep({commit, state, dispatch}, step) {
         if (step <= state.currentStep) {
             commit('putStep', step);
