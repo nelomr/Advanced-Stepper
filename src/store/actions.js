@@ -33,7 +33,7 @@ export default {
             commit('setOrders', orders);
             commit('setProducts', products);
         })
-        .catch(error => { console.error(error); throw error; });
+        .catch(error => { console.log('token api expired'); });
     },
     getProductsOrder({commit, state}, orders) {
         let result = state.products.filter(function(product) {

@@ -22,7 +22,18 @@ export default {
   },
   computed: {
       ordersList() {
+        if (this.$store.state.orders.length > 0) {
           return this.$store.state.orders
+        }
+
+        //In order to get some data if token api expires
+        return [
+          {
+            'logisticCode': 'DELIVERED-PICKUP',
+            'code': '1234',
+            'orderDate': '12-03-20'
+          }
+        ]
       }
   }
 }

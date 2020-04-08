@@ -90,15 +90,27 @@ export default {
     productsDetailOrder() {
     let details = [];
 
-    this.$store.state.productsDetailOrder.forEach(product => {
-      this.order.productsOrder.forEach(productOrder => {
-        if(product.id === productOrder.productId) {
+    if(this.$store.state.productsDetailOrder.length > 0) {
+      this.$store.state.productsDetailOrder.forEach(product => {
+        this.order.productsOrder.forEach(productOrder => {
+          if(product.id === productOrder.productId) {
             details.push({...productOrder, ...product});
-        }
+          }
+        });
       });
-    });
 
-    return details;
+      return details;
+    }
+
+    //In order to get some data if token api expires
+    return [
+      {
+        'id': '12',
+        'quantity': '2',
+        'name': 'Chaqueta',
+        'price': '12'
+      }
+    ]
     }
   }
 }
