@@ -4,6 +4,8 @@ soporte para teclado, tanto para flechas adelante/atrás, como números para ir 
 
 He pasado a persistir los datos para que al recargar la página se mantengan los datos de la store, se almacenan en la session storage. Esta configurado para que se borren al cerrar la tab o pestaña en el navegador.
 
+[Demo page](https://nelomr.github.io/Advanced-Stepper/)
+
 ## Project setup
 ```
 node version recomended 12.18.3
