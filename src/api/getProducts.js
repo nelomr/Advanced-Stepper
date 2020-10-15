@@ -1,7 +1,8 @@
 import client from '@/services/client'
 
 const PATH = '/apps/orders/search/findByCustomerId';
-const token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0LWZyb250ZWRAbXJqZWZmYXBwLmNvbSIsInJvbGVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwibmFtZSI6IkNhcmxvcyIsImlzcyI6ImJhY2tlbmQubXJqZWZmYXBwLm5ldCIsImlkIjoiMjk3NGQ4NGEtZDBhZS00MTQwLWJlZjktNjRjYWE0NmNmMDFhIiwiZnVsbG5hbWUiOiJDYXJsb3MgSGVybsOhbmRleiIsInR5cGUiOiJjdXN0b21lciIsImV4cCI6MTU4NDc5MTIwOCwiaWF0IjoxNTg0MTg2NDA4LCJqdGkiOiI4ODQxOTRlNC1iOWYyLTQxNmEtYWFiMy02MTY4NDdkOTc2YTUiLCJlbWFpbCI6InRlc3QtZnJvbnRlZEBtcmplZmZhcHAuY29tIn0.8kvrTI9ojm5Tr5HbBshQmUXtVoI-Q0fPYj1vUvOONpTTcpznFcRT3qHNVyNlbbyM3zsNiNsa1KHEo_wM98DfBA';
+const FALLBACK = 'https://run.mocky.io/v3/4617c559-e166-46e5-a1c0-fc677621e4c0';
+const token = 'eyJhbGciOiJIUzUxMiJ9.eyJuYW1lIjoiTmVsbyJ9.tnKYkQnGm4Uke__oUoGHPb2h7g8Rl_Sx4UHJkRzn0GHR1laJziKNclId6e9caLYxuENvGj4wVCs2Ow2EJK-YiQ';
 
 function getProducts () {
 

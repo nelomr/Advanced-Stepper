@@ -1,5 +1,5 @@
 import axios from 'axios';
-const HOST = 'https://ecommerce.v1.backend.pre.mrjeffapp.net';
+const HOST = 'https://run.mocky.io/v3/fc5cf304-cbeb-4a3f-97c8-e268cd6cdc0e';
 
 let client = axios.create({
     baseURL: HOST,
