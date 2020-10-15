@@ -6,6 +6,10 @@ He pasado a persistir los datos para que al recargar la página se mantengan los
 
 ## Project setup
 ```
+node version recomended 12.18.3
+```
+
+```
 yarn install
 ```
 
